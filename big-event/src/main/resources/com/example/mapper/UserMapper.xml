@@ -13,6 +13,14 @@
         where id=#{id}
     </update>
 
+    <update id="updateAvatar">
+        update user set user_pic=#{avatarUrl}, update_time=now(), id=#{id}
+    </update>
+
+    <update id="updatePwd">
+        update user set password=#{md5String}, update_time=now()
+    </update>
+
     <select id="findByUserName" resultType="com.example.pojo.User">
         select * from user where username=#{username}
     </select>

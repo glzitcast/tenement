@@ -14,4 +14,8 @@ public interface UserMapper {
     void add(@Param("username") String username, @Param("password") String password);
 
     void update(User user);
+
+    void updateAvatar(@Param("avatarUrl") String avatarUrl, @Param("id") Integer id);
+
+    void updatePwd(@Param("md5String") String md5String, Integer id);
 }
